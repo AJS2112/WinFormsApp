@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSisListas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SisListas" nillable="true" type="tns:SisListas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSisListas" nillable="true" type="tns:ArrayOfSisListas" />
+  <xs:complexType name="SisListas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descrip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_padre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_update" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SisListas" nillable="true" type="tns:SisListas" />
+</xs:schema>

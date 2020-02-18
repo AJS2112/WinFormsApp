@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b6f8612f-0538-42b8-bc5e-be34441ac25f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/VntClienteService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="b5cb7ba4-f0bf-48bb-ab16-190d6b12785a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/VntClienteService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="8388359d-3a39-4e71-bc23-cc381c83d326" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/VntClienteService/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="c5296419-b0dd-40cc-b453-d2af9b4c231c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/VntClienteService/mex" />
+    <MetadataFile FileName="WCF.Entities1.xsd" MetadataType="Schema" ID="b59a1fb0-6111-4e2e-81c2-046497e9b5cb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/VntClienteService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

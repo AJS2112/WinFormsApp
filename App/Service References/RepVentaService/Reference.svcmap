@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fb974b7f-1879-4ae6-93b8-92b91e5bf2fe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/RepVentaService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="17a127b3-1ab0-4e75-9d09-b214ccbbef2e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/RepVentaService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="44faa5dd-fd4f-457c-b47d-64471cdb4992" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/RepVentaService/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="2945587b-98e2-4792-a7ec-0982a3a72731" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/RepVentaService/mex" />
+    <MetadataFile FileName="WCF.Entities1.xsd" MetadataType="Schema" ID="9afddfb0-56b7-4a00-b9b9-38152afb90ea" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/RepVentaService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

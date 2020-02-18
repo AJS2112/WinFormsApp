@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRepInventario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RepInventario" nillable="true" type="tns:RepInventario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRepInventario" nillable="true" type="tns:ArrayOfRepInventario" />
+  <xs:complexType name="RepInventario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id_producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nro_control" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="operacion_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="producto_codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="producto_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="producto_unidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total_entrada" type="xs:double" />
+      <xs:element minOccurs="0" name="total_neutro" type="xs:double" />
+      <xs:element minOccurs="0" name="total_salida" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepInventario" nillable="true" type="tns:RepInventario" />
+</xs:schema>

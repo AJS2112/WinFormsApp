@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SisEmpresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="es_inactivo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="es_modo_fiscal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha_contrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="instrumentos_pago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_update" type="xs:int" />
+      <xs:element minOccurs="0" name="moneda_defecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monedas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_id" type="xs:int" />
+      <xs:element minOccurs="0" name="pct_fiscal" type="xs:double" />
+      <xs:element minOccurs="0" name="rif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SisEmpresa" nillable="true" type="tns:SisEmpresa" />
+</xs:schema>

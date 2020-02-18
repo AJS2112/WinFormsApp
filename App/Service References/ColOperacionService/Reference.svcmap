@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e79fba29-955c-4297-a500-a1d01d251a48" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/ColOperacionService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2e9e0ee7-871c-43b1-9df7-045b7c224d1f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColOperacionService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f77719ff-757d-4e42-9f0f-34311394f4ca" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColOperacionService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="296cee32-2662-42fc-9d65-e640ec5114f4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColOperacionService/mex" />
+    <MetadataFile FileName="WCF.Entities.xsd" MetadataType="Schema" ID="3dd53258-8116-4967-aa41-d1e347d6aeb9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColOperacionService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

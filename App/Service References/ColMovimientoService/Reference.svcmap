@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b6351057-462b-4d58-81fb-398d62ee202b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/ColMovimientoService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5fb5fdf0-3da9-41fe-b377-3058e930f3e6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColMovimientoService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0d777002-5c5a-41e1-95d6-6114772cc98b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColMovimientoService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="12f7e27a-b725-4b36-8877-6477c8b2f197" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColMovimientoService/mex" />
+    <MetadataFile FileName="WCF.Entities.xsd" MetadataType="Schema" ID="643f29a2-7989-4bc8-b284-7b872187feb3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/ColMovimientoService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

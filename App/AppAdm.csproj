@@ -1,0 +1,1409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F550549-09E5-4121-A3A8-B712FE039EAB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App</RootNamespace>
+    <AssemblyName>App</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TfhkaNet">
+      <HintPath>..\packages\TfhkaNet\TfhkaNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Classes\ConfigUI.cs" />
+    <Compile Include="Common\Classes\Globals.cs" />
+    <Compile Include="Common\Forms\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Forms\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Reports\Caja\crCajCuentaDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCajCuentaDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Caja\crCajCuentaResumen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCajCuentaResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Caja\crCajInstrumentoResumen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCajInstrumentoResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Caja\crCajInstrumentosDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCajInstrumentosDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Compras\crCmpOperacionesDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCmpOperacionesDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Compras\crCmpOperacionesProveedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCmpOperacionesProveedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Operaciones\crCmpOperacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCmpOperacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Inventario\crInvListadoExistencias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crInvListadoExistencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Inventario\crInvListadoMonetario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crInvListadoMonetario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Inventario\crInvListadoPrecios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crInvListadoPrecios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Inventario\crInvMovimientosDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crInvMovimientosDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Operaciones\crInvOperacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crInvOperacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Inventario\crInvResumenMovimientos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crInvResumenMovimientos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Compras\crCmpOperacionesResumen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCmpOperacionesResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Operaciones\crVntOperacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntOperacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Ventas\crVntClientesDeudasDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntClientesDeudasDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Ventas\crVntClientesDeudasResumen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntClientesDeudasResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Ventas\crVntClientesPagosRecibidos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntClientesPagosRecibidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Ventas\crVntOperacionesCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntOperacionesCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Ventas\crVntOperacionesDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntOperacionesDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Reports\Ventas\crVntOperacionesResumen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crVntOperacionesResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Caja\frmCajOperacionesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Caja\frmCajOperacionesDetail.Designer.cs">
+      <DependentUpon>frmCajOperacionesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Caja\frmCajMovimientoSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Caja\frmCajMovimientoSelection.Designer.cs">
+      <DependentUpon>frmCajMovimientoSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Caja\frmCajOperacionesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Caja\frmCajOperacionesList.Designer.cs">
+      <DependentUpon>frmCajOperacionesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpOperacionesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpOperacionesDetail.Designer.cs">
+      <DependentUpon>frmCmpOperacionesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpOperacionesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpOperacionesList.Designer.cs">
+      <DependentUpon>frmCmpOperacionesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpProvedoresSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpProvedoresSelection.Designer.cs">
+      <DependentUpon>frmCmpProvedoresSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpProveedoresList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpProveedoresList.Designer.cs">
+      <DependentUpon>frmCmpProveedoresList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpProveedoresDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Compras\frmCmpProveedoresDetail.Designer.cs">
+      <DependentUpon>frmCmpProveedoresDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmAjustesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmAjustesDetail.Designer.cs">
+      <DependentUpon>frmAjustesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCotizacionesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCotizacionesList.Designer.cs">
+      <DependentUpon>frmCnfCotizacionesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCuentasBancariasList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCuentasBancariasList.Designer.cs">
+      <DependentUpon>frmCnfCuentasBancariasList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfListasDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfListasDetail.Designer.cs">
+      <DependentUpon>frmCnfListasDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfListasList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfListasList.Designer.cs">
+      <DependentUpon>frmCnfListasList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCotizacionesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCotizacionesDetail.Designer.cs">
+      <DependentUpon>frmCnfCotizacionesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCuentasBancariasDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Configuraciones\frmCnfCuentasBancariasDetail.Designer.cs">
+      <DependentUpon>frmCnfCuentasBancariasDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvCategoriasDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvCategoriasDetail.Designer.cs">
+      <DependentUpon>frmInvCategoriasDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvCategoriasList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvCategoriasList.Designer.cs">
+      <DependentUpon>frmInvCategoriasList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvOperacionesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvOperacionesDetail.Designer.cs">
+      <DependentUpon>frmInvOperacionesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvOperacionesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvOperacionesList.Designer.cs">
+      <DependentUpon>frmInvOperacionesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvProductosDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvProductosDetail.Designer.cs">
+      <DependentUpon>frmInvProductosDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvProductosList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvProductosList.Designer.cs">
+      <DependentUpon>frmInvProductosList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvProductosSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Inventario\frmInvProductosSelection.Designer.cs">
+      <DependentUpon>frmInvProductosSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepCaja.Designer.cs">
+      <DependentUpon>frmRepCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepCompra.Designer.cs">
+      <DependentUpon>frmRepCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepInventario.Designer.cs">
+      <DependentUpon>frmRepInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Reportes\frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Reportes\frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Reportes\frmRepVenta.Designer.cs">
+      <DependentUpon>frmRepVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesAbonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesAbonos.Designer.cs">
+      <DependentUpon>frmVntClientesAbonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesDetail.Designer.cs">
+      <DependentUpon>frmVntClientesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesDeudas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesDeudas.Designer.cs">
+      <DependentUpon>frmVntClientesDeudas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesList.Designer.cs">
+      <DependentUpon>frmVntClientesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntClientesSelection.Designer.cs">
+      <DependentUpon>frmVntClientesSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntOperacionesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntOperacionesDetail.Designer.cs">
+      <DependentUpon>frmVntOperacionesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntOperacionesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Ventas\frmVntOperacionesList.Designer.cs">
+      <DependentUpon>frmVntOperacionesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CajMovimientoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CajOperacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CmpOperacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CmpProveedorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CnfCotizacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CnfCuentaBancariaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ColMovimientoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ColOperacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InvCategoriaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InvMovimientoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InvOperacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InvProductoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RepCajaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RepCompraService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RepDashboardService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RepInventarioService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RepVentaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SisEmpresaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SisImpuestoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SisListasService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SisOperacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SisUsuariosService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="frmSisLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSisLogin.Designer.cs">
+      <DependentUpon>frmSisLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\VntClienteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VntOperacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Common\Forms\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Forms\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Caja\crCajCuentaDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCajCuentaDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Caja\crCajCuentaResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCajCuentaResumen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Caja\crCajInstrumentoResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCajInstrumentoResumen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Caja\crCajInstrumentosDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCajInstrumentosDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Compras\crCmpOperacionesDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCmpOperacionesDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Compras\crCmpOperacionesProveedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCmpOperacionesProveedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Operaciones\crCmpOperacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCmpOperacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Inventario\crInvListadoExistencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crInvListadoExistencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Inventario\crInvListadoMonetario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crInvListadoMonetario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Inventario\crInvListadoPrecios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crInvListadoPrecios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Inventario\crInvMovimientosDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crInvMovimientosDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Operaciones\crInvOperacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crInvOperacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Inventario\crInvResumenMovimientos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crInvResumenMovimientos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Compras\crCmpOperacionesResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCmpOperacionesResumen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Operaciones\crVntOperacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntOperacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Ventas\crVntClientesDeudasDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntClientesDeudasDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Ventas\crVntClientesDeudasResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntClientesDeudasResumen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Ventas\crVntClientesPagosRecibidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntClientesPagosRecibidos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Ventas\crVntOperacionesCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntOperacionesCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Ventas\crVntOperacionesDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntOperacionesDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Reports\Ventas\crVntOperacionesResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crVntOperacionesResumen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Caja\frmCajOperacionesDetail.resx">
+      <DependentUpon>frmCajOperacionesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Caja\frmCajMovimientoSelection.resx">
+      <DependentUpon>frmCajMovimientoSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Caja\frmCajOperacionesList.resx">
+      <DependentUpon>frmCajOperacionesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Compras\frmCmpOperacionesDetail.resx">
+      <DependentUpon>frmCmpOperacionesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Compras\frmCmpOperacionesList.resx">
+      <DependentUpon>frmCmpOperacionesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Compras\frmCmpProvedoresSelection.resx">
+      <DependentUpon>frmCmpProvedoresSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Compras\frmCmpProveedoresList.resx">
+      <DependentUpon>frmCmpProveedoresList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Compras\frmCmpProveedoresDetail.resx">
+      <DependentUpon>frmCmpProveedoresDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmAjustesDetail.resx">
+      <DependentUpon>frmAjustesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmCnfCotizacionesDetail.resx">
+      <DependentUpon>frmCnfCotizacionesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmCnfCotizacionesList.resx">
+      <DependentUpon>frmCnfCotizacionesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmCnfCuentasBancariasList.resx">
+      <DependentUpon>frmCnfCuentasBancariasList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmCnfListasDetail.resx">
+      <DependentUpon>frmCnfListasDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmCnfListasList.resx">
+      <DependentUpon>frmCnfListasList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Configuraciones\frmCnfCuentasBancariasDetail.resx">
+      <DependentUpon>frmCnfCuentasBancariasDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvCategoriasDetail.resx">
+      <DependentUpon>frmInvCategoriasDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvCategoriasList.resx">
+      <DependentUpon>frmInvCategoriasList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvOperacionesDetail.resx">
+      <DependentUpon>frmInvOperacionesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvOperacionesList.resx">
+      <DependentUpon>frmInvOperacionesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvProductosDetail.resx">
+      <DependentUpon>frmInvProductosDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvProductosList.resx">
+      <DependentUpon>frmInvProductosList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Inventario\frmInvProductosSelection.resx">
+      <DependentUpon>frmInvProductosSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Reportes\frmRepCaja.resx">
+      <DependentUpon>frmRepCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Reportes\frmRepCompra.resx">
+      <DependentUpon>frmRepCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Reportes\frmRepInventario.resx">
+      <DependentUpon>frmRepInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Reportes\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Reportes\frmRepVenta.resx">
+      <DependentUpon>frmRepVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntClientesAbonos.resx">
+      <DependentUpon>frmVntClientesAbonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntClientesDetail.resx">
+      <DependentUpon>frmVntClientesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntClientesDeudas.resx">
+      <DependentUpon>frmVntClientesDeudas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntClientesList.resx">
+      <DependentUpon>frmVntClientesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntClientesSelection.resx">
+      <DependentUpon>frmVntClientesSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntOperacionesDetail.resx">
+      <DependentUpon>frmVntOperacionesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Ventas\frmVntOperacionesList.resx">
+      <DependentUpon>frmVntOperacionesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmSisLogin.resx">
+      <DependentUpon>frmSisLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\CajMovimientoService\App.CajMovimientoService.CajMovimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CajMovimientoService\service1.wsdl" />
+    <None Include="Service References\CajMovimientoService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CajMovimientoService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CajMovimientoService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CajOperacionService\App.CajOperacionService.CajOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CajOperacionService\service1.wsdl" />
+    <None Include="Service References\CajOperacionService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CajOperacionService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CajOperacionService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmpOperacionService\App.CmpOperacionService.CmpOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CmpOperacionService\service.wsdl" />
+    <None Include="Service References\CmpOperacionService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmpOperacionService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmpOperacionService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmpProveedorService\App.CmpProveedorService.CmpProveedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CmpProveedorService\service.wsdl" />
+    <None Include="Service References\CmpProveedorService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmpProveedorService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmpProveedorService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CnfCotizacionService\App.CnfCotizacionService.CnfCotizacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CnfCotizacionService\App.CnfCotizacionService.CnfCotizacionDetalle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CnfCotizacionService\service.wsdl" />
+    <None Include="Service References\CnfCotizacionService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CnfCotizacionService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CnfCotizacionService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CnfCuentaBancariaService\App.CnfCuentaBancariaService.CnfCuentaBancaria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CnfCuentaBancariaService\service1.wsdl" />
+    <None Include="Service References\CnfCuentaBancariaService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CnfCuentaBancariaService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CnfCuentaBancariaService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColMovimientoService\App.ColMovimientoService.ColMovimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ColMovimientoService\service.wsdl" />
+    <None Include="Service References\ColMovimientoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColMovimientoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColMovimientoService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColOperacionService\App.ColOperacionService.ColOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ColOperacionService\service.wsdl" />
+    <None Include="Service References\ColOperacionService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColOperacionService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColOperacionService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvCategoriaService\App.InvCategoriaService.InvCategoria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InvCategoriaService\service.wsdl" />
+    <None Include="Service References\InvCategoriaService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvCategoriaService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvCategoriaService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvMovimientoService\App.InvMovimientoService.InvMovimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InvMovimientoService\service.wsdl" />
+    <None Include="Service References\InvMovimientoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvMovimientoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvMovimientoService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvOperacionService\App.InvOperacionService.InvOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InvOperacionService\service1.wsdl" />
+    <None Include="Service References\InvOperacionService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvOperacionService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvOperacionService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvProductoService\App.InvProductoService.InvProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InvProductoService\service.wsdl" />
+    <None Include="Service References\InvProductoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvProductoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InvProductoService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepCajaService\App.RepCajaService.RepCaja.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RepCajaService\service1.wsdl" />
+    <None Include="Service References\RepCajaService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepCajaService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepCajaService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepCompraService\App.RepCompraService.RepCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RepCompraService\service1.wsdl" />
+    <None Include="Service References\RepCompraService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepCompraService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepCompraService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepDashboardService\App.RepDashboardService.RepDashboard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RepDashboardService\service1.wsdl" />
+    <None Include="Service References\RepDashboardService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepDashboardService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepDashboardService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepInventarioService\App.RepInventarioService.RepInventario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RepInventarioService\service1.wsdl" />
+    <None Include="Service References\RepInventarioService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepInventarioService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepInventarioService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepVentaService\App.RepVentaService.RepVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RepVentaService\service1.wsdl" />
+    <None Include="Service References\RepVentaService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepVentaService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RepVentaService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisEmpresaService\App.SisEmpresaService.SisEmpresa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SisEmpresaService\service.wsdl" />
+    <None Include="Service References\SisEmpresaService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisEmpresaService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisEmpresaService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisImpuestoService\App.SisImpuestoService.SisImpuesto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SisImpuestoService\service.wsdl" />
+    <None Include="Service References\SisImpuestoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisImpuestoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisImpuestoService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisListasService\App.SisListasService.SisListas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SisListasService\service.wsdl" />
+    <None Include="Service References\SisListasService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisListasService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisListasService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisOperacionService\App.SisOperacionService.SisOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SisOperacionService\service.wsdl" />
+    <None Include="Service References\SisOperacionService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisOperacionService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisOperacionService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisUsuariosService\App.SisUsuariosService.SisUsuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SisUsuariosService\service.wsdl" />
+    <None Include="Service References\SisUsuariosService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisUsuariosService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SisUsuariosService\WCF.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VntClienteService\App.VntClienteService.VntCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VntClienteService\service1.wsdl" />
+    <None Include="Service References\VntClienteService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VntClienteService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VntClienteService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VntOperacionService\App.VntOperacionService.VntOperacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VntOperacionService\service1.wsdl" />
+    <None Include="Service References\VntOperacionService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VntOperacionService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VntOperacionService\WCF.Entities1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvCategoriaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CajMovimientoService\" />
+    <WCFMetadataStorage Include="Service References\CajOperacionService\" />
+    <WCFMetadataStorage Include="Service References\CmpOperacionService\" />
+    <WCFMetadataStorage Include="Service References\CmpProveedorService\" />
+    <WCFMetadataStorage Include="Service References\CnfCotizacionService\" />
+    <WCFMetadataStorage Include="Service References\CnfCuentaBancariaService\" />
+    <WCFMetadataStorage Include="Service References\ColMovimientoService\" />
+    <WCFMetadataStorage Include="Service References\ColOperacionService\" />
+    <WCFMetadataStorage Include="Service References\InvCategoriaService\" />
+    <WCFMetadataStorage Include="Service References\InvMovimientoService\" />
+    <WCFMetadataStorage Include="Service References\InvOperacionService\" />
+    <WCFMetadataStorage Include="Service References\InvProductoService\" />
+    <WCFMetadataStorage Include="Service References\RepCajaService\" />
+    <WCFMetadataStorage Include="Service References\RepCompraService\" />
+    <WCFMetadataStorage Include="Service References\RepDashboardService\" />
+    <WCFMetadataStorage Include="Service References\RepInventarioService\" />
+    <WCFMetadataStorage Include="Service References\RepVentaService\" />
+    <WCFMetadataStorage Include="Service References\SisEmpresaService\" />
+    <WCFMetadataStorage Include="Service References\SisImpuestoService\" />
+    <WCFMetadataStorage Include="Service References\SisListasService\" />
+    <WCFMetadataStorage Include="Service References\SisOperacionService\" />
+    <WCFMetadataStorage Include="Service References\SisUsuariosService\" />
+    <WCFMetadataStorage Include="Service References\VntClienteService\" />
+    <WCFMetadataStorage Include="Service References\VntOperacionService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisUsuariosService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisUsuariosService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisUsuariosService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisEmpresaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisEmpresaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisEmpresaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CnfCotizacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CnfCotizacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CnfCotizacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvCategoriaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvCategoriaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvProductoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvProductoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvProductoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisListasService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisListasService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisListasService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisImpuestoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisImpuestoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisImpuestoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmpProveedorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmpProveedorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmpProveedorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmpOperacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmpOperacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmpOperacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisOperacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisOperacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SisOperacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvMovimientoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvMovimientoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvMovimientoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VntClienteService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VntClienteService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VntClienteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VntOperacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VntOperacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VntOperacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CnfCuentaBancariaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CnfCuentaBancariaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CnfCuentaBancariaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CajMovimientoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CajMovimientoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CajMovimientoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CajOperacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CajOperacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CajOperacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvOperacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvOperacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InvOperacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepInventarioService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepInventarioService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepInventarioService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepCompraService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepCompraService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepCompraService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepVentaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepVentaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepVentaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepCajaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepCajaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepCajaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepDashboardService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepDashboardService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RepDashboardService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColMovimientoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColMovimientoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColMovimientoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColOperacionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColOperacionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColOperacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

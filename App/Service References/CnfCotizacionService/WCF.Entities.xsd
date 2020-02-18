@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCnfCotizacionDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CnfCotizacionDetalle" nillable="true" type="tns:CnfCotizacionDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCnfCotizacionDetalle" nillable="true" type="tns:ArrayOfCnfCotizacionDetalle" />
+  <xs:complexType name="CnfCotizacionDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_cotizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_update" type="xs:int" />
+      <xs:element minOccurs="0" name="moneda_descrip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="moneda_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_id" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" type="xs:double" />
+      <xs:element minOccurs="0" name="valor_anterior" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CnfCotizacionDetalle" nillable="true" type="tns:CnfCotizacionDetalle" />
+  <xs:complexType name="ArrayOfCnfCotizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CnfCotizacion" nillable="true" type="tns:CnfCotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCnfCotizacion" nillable="true" type="tns:ArrayOfCnfCotizacion" />
+  <xs:complexType name="CnfCotizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_registro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_update" type="xs:int" />
+      <xs:element minOccurs="0" name="nro_control" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numero" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CnfCotizacion" nillable="true" type="tns:CnfCotizacion" />
+</xs:schema>

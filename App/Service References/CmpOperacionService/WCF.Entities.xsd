@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCmpOperacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CmpOperacion" nillable="true" type="tns:CmpOperacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCmpOperacion" nillable="true" type="tns:ArrayOfCmpOperacion" />
+  <xs:complexType name="CmpOperacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="base_imponible_ta" type="xs:double" />
+      <xs:element minOccurs="0" name="base_imponible_ta_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="base_imponible_tg" type="xs:double" />
+      <xs:element minOccurs="0" name="base_imponible_tg_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="base_imponible_tr" type="xs:double" />
+      <xs:element minOccurs="0" name="base_imponible_tr_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_documento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_registro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_cotizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_destino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_doc_origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_estado" type="xs:int" />
+      <xs:element minOccurs="0" name="id_proveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_status" type="xs:int" />
+      <xs:element minOccurs="0" name="id_tipo_documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_tipo_operacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_update" type="xs:int" />
+      <xs:element minOccurs="0" name="monto_exento" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_exento_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_iva_ta" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_iva_ta_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_iva_tg" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_iva_tg_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_iva_tr" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_iva_tr_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="nro_control" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nro_control_documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nro_documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nro_factura_afectada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numero" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_id" type="xs:int" />
+      <xs:element minOccurs="0" name="pct_adicional" type="xs:double" />
+      <xs:element minOccurs="0" name="pct_alicuota_ta" type="xs:double" />
+      <xs:element minOccurs="0" name="pct_alicuota_tg" type="xs:double" />
+      <xs:element minOccurs="0" name="pct_alicuota_tr" type="xs:double" />
+      <xs:element minOccurs="0" name="pct_descuento" type="xs:double" />
+      <xs:element minOccurs="0" name="proveedor_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="proveedor_rif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_documento_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:double" />
+      <xs:element minOccurs="0" name="total_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="usuario_nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CmpOperacion" nillable="true" type="tns:CmpOperacion" />
+  <xs:complexType name="ArrayOfInvMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvMovimiento" nillable="true" type="tns:InvMovimiento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvMovimiento" nillable="true" type="tns:ArrayOfInvMovimiento" />
+  <xs:complexType name="InvMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:double" />
+      <xs:element minOccurs="0" name="costo" type="xs:double" />
+      <xs:element minOccurs="0" name="costo_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_impuesto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_operacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_tipo_operacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_update" type="xs:int" />
+      <xs:element minOccurs="0" name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_impuesto" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_impuesto_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="monto_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="order_id" type="xs:int" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+      <xs:element minOccurs="0" name="precio_moneda" type="xs:double" />
+      <xs:element minOccurs="0" name="producto_codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="producto_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="producto_unidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor_impuesto" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvMovimiento" nillable="true" type="tns:InvMovimiento" />
+</xs:schema>

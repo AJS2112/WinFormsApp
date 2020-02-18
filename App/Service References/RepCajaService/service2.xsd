@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WCF.Entities" />
+  <xs:element name="GetCuentasDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_moneda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desde" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCuentasDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF.Entities" minOccurs="0" name="GetCuentasDetalleResult" nillable="true" type="q1:ArrayOfRepCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCuentasResumen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_moneda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desde" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCuentasResumenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF.Entities" minOccurs="0" name="GetCuentasResumenResult" nillable="true" type="q2:ArrayOfRepCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentosDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_moneda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_instrumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desde" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentosDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF.Entities" minOccurs="0" name="GetInstrumentosDetalleResult" nillable="true" type="q3:ArrayOfRepCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentosResumen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_moneda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desde" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentosResumenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF.Entities" minOccurs="0" name="GetInstrumentosResumenResult" nillable="true" type="q4:ArrayOfRepCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

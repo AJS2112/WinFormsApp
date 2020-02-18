@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="962714ac-96e5-4af8-a957-0b215097afe4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/SisImpuestoService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0a9157d2-222a-4ad3-a54a-dade28f8a812" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/SisImpuestoService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="16fa0154-0f5e-47e9-803c-96d78e35b752" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/SisImpuestoService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="19ebfaa2-26ab-4945-88ad-8d14fdc29cc0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/SisImpuestoService/mex" />
+    <MetadataFile FileName="WCF.Entities.xsd" MetadataType="Schema" ID="3c603ecb-dd54-4448-8c5c-33b6d1d3c84e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/SisImpuestoService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
